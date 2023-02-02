@@ -19,33 +19,35 @@ def load_data(mat_file_path: str, table_name: str):
         subject.append(tab[sample][0][0, 0])
         ADL.append(tab[sample][1][0, 0])
         time.append(tab[sample][2][:, 0])
-        raw_emg.append(tab[sample][3][:, 0])
+        raw_emg.append(tab[sample][3][:, :])
 
     df = pd.DataFrame({'subject': subject, 'ADL': ADL, 'time': time, 'raw_emg': raw_emg})
     return df
 
 
-def get_raw_emg(df: pd.DataFrame, subject: int, adl: int, display: False):
+def get_raw_emg(df: pd.DataFrame, subject: int, channel: int, adl: int, display: False):
 
     row = df.loc[(df['subject'] == subject) & (df['ADL'] == adl)]
     time = row['time'].values[0]
-    raw_emg = row['raw_emg'].values[0]
+    raw_emg = row['raw_emg'].values[0][:, channel] ### erreur ici
     if display:
         sns.lineplot(x=time, y=raw_emg)
         plt.xlabel('time')
         plt.ylabel('EMG')
-        plt.title(f'subject: {subject}, ADL: {adl}')
+        plt.title(f'subject: {subject}, ADL: {adl}, Muscle: {channel}')
         plt.show()
     return time, raw_emg
 
 
 if __name__ == "__main__":
 
-    mat_file = 'RAW_EMG.mat'
+    mat_file = r'C:\Users\dohaz\OneDrive\Bureau\uni\5e année\Projet individuel\repository\database conversion to csv (not on github)\RAW_EMG.mat'
     tab_name = 'RAW_EMG'
     data = load_data(mat_file, tab_name)
     #display one
     subject = 1
     adl = 15
-    time_vector, raw_emg_values = get_raw_emg(data, subject, adl, display=True)
-    data.to_csv("data.csv", index=False)
+    channel = 1
+    time_vector, raw_emg_values = get_raw_emg(data, subject, channel, adl, display=True)
+    data.to_pickle("data.pkl")
+    #data.to_hdf('data.hdf5', key='df', mode='w', index=False) # try format='table'
