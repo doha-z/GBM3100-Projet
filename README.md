@@ -22,7 +22,7 @@ Le graphique suivant illustre les performances de chacun des 5 modèles entrain�
 
 On observe que le classifieur XGB a la meilleure performance (supérieure à 80% pour 20 mouvements différents).
 
-Note : Tout le travail et code est le travail de l'auteure, sauf les fonctions préexistantes d'extraction de 'features'. Les fichiers [digital_processing.py](https://github.com/doha-z/GBM3100-Projet/blob/main/projet_EMG/digital_processing.py) et [feature_extraction.py](https://github.com/doha-z/GBM3100-Projet/blob/main/projet_EMG/feature_extraction.py) proviennent d'un [répositoire existant]([https://github.com/SebastianRestrepoA](https://github.com/SebastianRestrepoA/EMG-pattern-recognition)).
+Note : Tout le travail et code est le travail de l'auteure, sauf les fonctions préexistantes d'extraction de 'features'. Le fichier [feature_extraction.py](https://github.com/doha-z/GBM3100-Projet/blob/main/projet_EMG/feature_extraction.py) provient d'un [répositoire existant]([https://github.com/SebastianRestrepoA](https://github.com/SebastianRestrepoA/EMG-pattern-recognition)).
 
 ## Références
 Jarque-Bou, N. J., Vergara, M., Sancho-Bru, J. L., Gracia-Ibáñez, V., & Roda-Sales, A. (2019). A calibrated database
