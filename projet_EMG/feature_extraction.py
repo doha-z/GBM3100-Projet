@@ -1,5 +1,5 @@
 """
-Source code : https://github.com/SebastianRestrepoA/EMG-pattern-recognition/tree/c3a5db8f5b19bb2dc7cf0755b13f14b20403457c
+Ce code provient de la source suivante : https://github.com/SebastianRestrepoA/EMG-pattern-recognition/tree/c3a5db8f5b19bb2dc7cf0755b13f14b20403457c
 """
 import numpy as np
 import pandas as pd
