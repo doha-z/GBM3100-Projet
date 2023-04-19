@@ -1,3 +1,7 @@
+"""
+Ce code provient de la source suivante : https://github.com/SebastianRestrepoA/EMG-pattern-recognition/tree/c3a5db8f5b19bb2dc7cf0755b13f14b20403457c
+"""
+
 from scipy import signal
 import matplotlib.pyplot as plt
 import numpy as np
