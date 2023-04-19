@@ -1,3 +1,6 @@
+"""
+Le code du présent fichier provient de la source suivante : https://github.com/SebastianRestrepoA/EMG-pattern-recognition/blob/c3a5db8f5b19bb2dc7cf0755b13f14b20403457c/feature_extraction.py
+"""
 import numpy as np
 import pandas as pd
 import math
